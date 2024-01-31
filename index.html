@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>port-front-end</title>
+</head>
+<body>
+    <h1>Word Form</h1>
+    <p>This form will send a message to the front end</p>
+    <br>
+    <form id="wordForm">
+        <label>Enter Word</label>
+        <input id="word" type="text" name="word">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        document.getElementById("wordForm").addEventListener("submit", function(event){event.preventDefault()
+        let word = document.getElementById("word").value
+        console.log("word",word)
+        /*
+        // fetch test
+        fetch('/log', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ word: word })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to log word');
+                }
+                console.log('Word logged successfully:', word);
+            })
+            .catch(error => {
+                console.error('Error logging word:', error);
+
+                */
+        });
+    </script>
+</body>
+</html>
