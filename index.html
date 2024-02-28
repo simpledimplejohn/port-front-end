@@ -22,7 +22,7 @@
         let word = document.getElementById("word").value;
 
         // Send the word to the server
-        fetch('/log', {
+        fetch('http://54.85.47.216:3000/log', { // Corrected URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
