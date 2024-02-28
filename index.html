@@ -6,7 +6,8 @@
     <title>port-front-end</title>
 </head>
 <body>
-    <h1>Word Form</h1>
+    <h1>Local</h1>
+    <h2>Word Form</h2>
     <p>This form will send a message to the front end</p>
     <br>
     <form id="wordForm">
@@ -20,6 +21,8 @@
 
         // Get the value entered in the input field
         let word = document.getElementById("word").value;
+        let append = ", location : local, repository : port-front-end "
+        word = ": " + word + append;
 
         // Send the word to the server
         fetch('http://54.85.47.216:3000/log', { // Corrected URL
